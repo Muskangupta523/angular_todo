@@ -1,0 +1,55 @@
+<div class="on">
+  <div class="one">
+
+    <h2>Todo List</h2>
+<button (click)="openDialog()"></button>
+    <form #formData="ngForm" (ngSubmit)="submitAfterFill(formData)">
+      <div class="container">
+        <div class="taskName">
+          <input type="text" name="texts" id="taskName" #text="ngModel" ngModel  required minlength="7" appCapitalize placeholder="Enter task">
+          <small *ngIf="text.invalid && text.touched">Field is required and Min length 7</small>
+        </div>
+
+        <div class="taskDate">
+          <input type="date" name="dates" id="taskDate" #dates="ngModel" ngModel  required [min]="minDate">
+          <small *ngIf="dates.invalid && dates.touched">Field is required</small>
+          <small>{{dateError}}</small>
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="formData.invalid">Add Task</button>
+
+    </form>
+
+    <ul>
+      <h1>Pending Task</h1>
+      <div class="raw">
+        <li *ngFor="let task of array; let i=index">
+          <div class="check-task">
+            <input type="checkbox" id="checks" (click)="donetask(i)">
+            <span>{{ task.texts }}</span>
+          </div>
+          <span>{{ task.dates }}</span>
+          <div class="btn-set">
+            <button class="btn" (click)="deletetask(i)">delete</button>
+            <button class="btn" (click)="edittask(i)">edit</button>
+          </div>
+        </li>
+      </div>
+    </ul>
+
+    <ul>
+      <h1>Complete Task</h1>
+      <div class="raw">
+        <li *ngFor="let done of completearray  let i =index">
+          <div class="complete">
+            <input id="checks" type="checkbox" checked (click)="pendingtask(i)">
+            <span>{{ done.texts }}</span>
+          </div>
+          <span>{{ done.dates }}</span>
+        </li>
+      </div>
+    </ul>
+
+  </div>
+</div>

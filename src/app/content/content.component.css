@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.on {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background: linear-gradient(rgb(166, 237, 166), rgb(239, 239, 69));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.one {
+  width: 80vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 20px;
+  border: 4px solid #d6e909;
+  box-shadow: 15px 10px 40px 4px rgb(85, 85, 75);
+}
+
+
+h2 {
+  color: #333;
+  margin-left: 16px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 35px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  min-height: 100%;
+  padding-left: 80px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.taskName, .taskDate{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  color: red;
+}
+.taskName input,
+.taskDate input {
+  width: 16vw;
+  height: 30px;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+form button {
+  width: 70px;
+  height: 34px;
+  margin: 20px;
+  font-size: 15px;
+  border-radius: 8px;
+}
+
+#checks {
+  /* Customize the size of the checkbox */
+  width: 25px;
+  height: 25px;
+}
+
+.check-task {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.check-task input {
+  width: 20%;
+}
+
+.check-task span {
+  width: 80%;
+}
+
+.complete {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.complete input {
+  width: 20%;
+}
+
+.complete span {
+  width: 80%;
+}
+
+.btn-set {
+  width: 21%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 50px;
+  padding: 5px;
+  background-color: #d1d962;
+  color: rgb(18, 16, 16);
+  border: none;
+  cursor: pointer;
+  box-shadow: 6px 6px rgb(152, 161, 27);
+
+}
+
+.btn:hover,
+#actionbtn:hover {
+  background-color: #a0b028;
+}
+
+ul {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.raw {
+  width: 100%;
+  position: relative;
+}
+
+li {
+  width: 95%;
+  padding: 10px;
+  border: 4px solid #d5efb5;
+  background-color: #f4f7f8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+  height: auto;
+}
+
+h1 {
+  width: 100%;
+  font-weight: 500;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  margin: 20px;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+span {
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.error {
+  font-size: 0.6rem;
+  color: red;
+  margin-left: 10px;
+}
